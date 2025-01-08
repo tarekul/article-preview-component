@@ -27,7 +27,7 @@ p {
 }
 
 .main {
-    width: 730px;
+    max-width: 672px;
     margin: auto;
     display: flex;
     gap: 20px;
@@ -36,8 +36,10 @@ p {
 }
 
 .drawers {
-    width: 350px;
-    height: 250px;
+    background-image: url("./images/drawers.jpg");
+    background-size: cover;
+    flex: 1;
+    min-height: 200px;
 }
 
 .section {
@@ -45,6 +47,7 @@ p {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
+    flex: 1;
 }
 
 .title {
@@ -110,12 +113,16 @@ p {
     background-color: var(--Very_Dark_Grayish_Blue);
     border-radius: 10px;
     padding: 15px 25px;
-    display: none;
+    visibility: hidden;
     align-items: center;
+    opacity: 0;
 }
 
 .active {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: ease-in-out 0.3s;
 }
 
 .social::after {
@@ -138,4 +145,11 @@ p {
 
 .social img {
     margin: 0 5px; /* Space between icons */
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 90vw;
+    }
 }
