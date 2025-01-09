@@ -39,7 +39,6 @@ p {
     background-image: url("./images/drawers.jpg");
     background-size: cover;
     flex: 1;
-    min-height: 200px;
 }
 
 .section {
@@ -60,7 +59,11 @@ p {
     font-size: 13px;
 }
 
-.card-footer {
+.footer {
+    position: relative;
+}
+
+.info {
     display: flex;
     gap: 10px;
 }
@@ -81,14 +84,9 @@ p {
     color: var(--Desaturated_Dark_Blue);
 }
 
-.share-container {
-    position: relative;
-    margin-left: auto;
-    padding: 10px;
-}
-
 #share {
     align-self: center;
+    margin-left: auto;
     background-color: aliceblue;
     padding: 7px;
     border-radius: 50%;
@@ -108,7 +106,7 @@ p {
 .social {
     position: absolute;
     bottom: 100%;
-    left: 50%;
+    left: 95%;
     transform: translateX(-54%);
     background-color: var(--Very_Dark_Grayish_Blue);
     border-radius: 10px;
@@ -120,6 +118,7 @@ p {
 
 .active {
     display: flex;
+    justify-content: space-between;
     opacity: 1;
     visibility: visible;
     transition: ease-in-out 0.3s;
@@ -143,13 +142,41 @@ p {
     margin-right: 10px;
 }
 
-.social img {
-    margin: 0 5px; /* Space between icons */
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+@media screen and (min-width: 769px) {
+    .social #share {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .main {
         flex-direction: column;
         width: 90vw;
+    }
+
+    .drawers {
+        min-height: 30vh;
+    }
+
+    .social {
+        left: 0;
+        bottom: 0;
+        transform: translateX(0);
+        width: calc(100% + 40px);
+        border-radius: 0 0 10px 10px;
+        box-sizing: border-box;
+        margin-left: -20px;
+        margin-bottom: -20px;
+    }
+
+    .social::after {
+        content: none;
     }
 }

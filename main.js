@@ -3,7 +3,7 @@ const shareButton = document.getElementById('share');
 const social = document.querySelector('.social');
 
 shareButton.addEventListener('click', (event) => {
-    social.classList.add('active');
+    social.classList.toggle('active');
     event.stopPropagation();
 })
 
