@@ -84,7 +84,7 @@ p {
     color: var(--Desaturated_Dark_Blue);
 }
 
-#share {
+.share {
     align-self: center;
     margin-left: auto;
     background-color: aliceblue;
@@ -95,7 +95,7 @@ p {
     cursor: pointer;
 }
 
-#share:active {
+.share:active {
     background-color:darkgray;
     color: aliceblue;
 }
@@ -152,7 +152,7 @@ p {
 }
 
 @media screen and (min-width: 769px) {
-    .social #share {
+    .social .share {
         display: none;
     }
 }

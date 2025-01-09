@@ -6,3 +6,9 @@
 
 ![Mobile screenshot](./screenshots/mobile_screenshot.png)
 ![Mobile active screenshot](./screenshots/mobile_active_screenshot.png)
+
+### Challenges Faced
+
+- Positioning the share button and social media icons
+- Positioning the social media icons
+- Transitioning the social media icons to fade in and out
