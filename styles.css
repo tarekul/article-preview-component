@@ -91,6 +91,8 @@ p {
     padding: 7px;
     border-radius: 50%;
     border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 #share:active {
