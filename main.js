@@ -1,5 +1,5 @@
 const body = document.body;
-const shareButton = document.getElementById('share');
+const shareButton = document.getElementsByClassName('share');
 const social = document.querySelector('.social');
 
 shareButton.addEventListener('click', (event) => {
